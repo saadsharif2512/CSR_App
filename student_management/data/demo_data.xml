@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- === COURSES === -->
+    <record id="course_python" model="course.course">
+        <field name="name">Introduction to Python</field>
+        <field name="code">PY101</field>
+        <field name="credit_hours">3</field>
+        <field name="level">ug</field>
+    </record>
+
+    <record id="course_data" model="course.course">
+        <field name="name">Data Structures</field>
+        <field name="code">CS201</field>
+        <field name="credit_hours">4</field>
+        <field name="level">ug</field>
+    </record>
+
+    <record id="course_ai" model="course.course">
+        <field name="name">Artificial Intelligence</field>
+        <field name="code">AI301</field>
+        <field name="credit_hours">3</field>
+        <field name="level">pg</field>
+    </record>
+
+    <record id="course_math" model="course.course">
+    <field name="name">Mathematics for Engineers</field>
+        <field name="code">MA102</field>
+        <field name="credit_hours">4</field>
+        <field name="level">ug</field>
+    </record>
+
+    <record id="course_networks" model="course.course">
+        <field name="name">Computer Networks</field>
+        <field name="code">CN204</field>
+        <field name="credit_hours">3</field>
+        <field name="level">ug</field>
+    </record>
+
+    <record id="course_ml" model="course.course">
+        <field name="name">Machine Learning</field>
+        <field name="code">ML401</field>
+        <field name="credit_hours">3</field>
+        <field name="level">pg</field>
+    </record>
+
+    <!-- === STUDENTS === -->
+    <record id="student_alaa" model="student.student">
+        <field name="name">Alaa Elkouni</field>
+        <field name="email">alaa@example.com</field>
+        <field name="phone">+971501234567</field>
+        <field name="birth_date">2001-03-15</field>
+        <field name="status">enrolled</field>
+    </record>
+
+    <record id="student_sara" model="student.student">
+        <field name="name">Sara Ahmed</field>
+        <field name="email">sara.ahmed@example.com</field>
+        <field name="phone">+971502223344</field>
+        <field name="birth_date">2000-07-21</field>
+        <field name="status">new</field>
+    </record>
+
+    <record id="student_khaled" model="student.student">
+        <field name="name">Khaled Youssef</field>
+        <field name="email">khaled.youssef@example.com</field>
+        <field name="phone">+971509876543</field>
+        <field name="birth_date">1999-11-10</field>
+        <field name="status">graduated</field>
+    </record>
+
+    <record id="student_fatma" model="student.student">
+        <field name="name">Fatma Hassan</field>
+        <field name="email">fatma.hassan@example.com</field>
+        <field name="phone">+971507777777</field>
+        <field name="birth_date">2002-02-10</field>
+        <field name="status">enrolled</field>
+    </record>
+
+    <record id="student_mohammed" model="student.student">
+        <field name="name">Mohammed Al Mansoori</field>
+        <field name="email">m.mansoori@example.com</field>
+        <field name="phone">+971505555555</field>
+        <field name="birth_date">2001-10-25</field>
+        <field name="status">enrolled</field>
+    </record>
+
+    <record id="student_lina" model="student.student">
+        <field name="name">Lina Karim</field>
+        <field name="email">lina.karim@example.com</field>
+        <field name="phone">+971508881122</field>
+        <field name="birth_date">2003-01-09</field>
+        <field name="status">new</field>
+    </record>
+
+    <record id="student_omar" model="student.student">
+        <field name="name">Omar Nabil</field>
+        <field name="email">omar.nabil@example.com</field>
+        <field name="phone">+971503344556</field>
+        <field name="birth_date">1998-05-14</field>
+        <field name="status">graduated</field>
+    </record>
+
+    <record id="student_nour" model="student.student">
+        <field name="name">Nour El-Sayed</field>
+        <field name="email">nour.elsayed@example.com</field>
+        <field name="phone">+971502020202</field>
+        <field name="birth_date">2000-09-01</field>
+        <field name="status">enrolled</field>
+    </record>
+
+    <record id="student_ziad" model="student.student">
+        <field name="name">Ziad Saleh</field>
+        <field name="email">ziad.saleh@example.com</field>
+        <field name="phone">+971501010101</field>
+        <field name="birth_date">2002-04-27</field>
+        <field name="status">new</field>
+    </record>
+
+    <record id="student_mariam" model="student.student">
+        <field name="name">Mariam Fouad</field>
+        <field name="email">mariam.fouad@example.com</field>
+        <field name="phone">+971504444333</field>
+        <field name="birth_date">2001-12-12</field>
+        <field name="status">enrolled</field>
+    </record>
+
+    <!-- === ENROLLMENTS === -->
+    <!-- Alaa -->
+    <record id="enroll_alaa_python" model="enrollment.enrollment">
+        <field name="student_id" ref="student_alaa"/>
+        <field name="course_id" ref="course_python"/>
+        <field name="status">confirmed</field>
+        <field name="grade">a</field>
+    </record>
+    <record id="enroll_alaa_data" model="enrollment.enrollment">
+        <field name="student_id" ref="student_alaa"/>
+        <field name="course_id" ref="course_data"/>
+        <field name="status">completed</field>
+        <field name="grade">b</field>
+    </record>
+
+    <!-- Sara -->
+    <record id="enroll_sara_math" model="enrollment.enrollment">
+        <field name="student_id" ref="student_sara"/>
+        <field name="course_id" ref="course_math"/>
+        <field name="status">draft</field>
+        <field name="grade">na</field>
+    </record>
+
+    <!-- Khaled -->
+    <record id="enroll_khaled_ai" model="enrollment.enrollment">
+        <field name="student_id" ref="student_khaled"/>
+        <field name="course_id" ref="course_ai"/>
+        <field name="status">completed</field>
+        <field name="grade">a</field>
+    </record>
+    <record id="enroll_khaled_ml" model="enrollment.enrollment">
+        <field name="student_id" ref="student_khaled"/>
+        <field name="course_id" ref="course_ml"/>
+        <field name="status">completed</field>
+        <field name="grade">b</field>
+    </record>
+
+    <!-- Fatma -->
+    <record id="enroll_fatma_networks" model="enrollment.enrollment">
+        <field name="student_id" ref="student_fatma"/>
+        <field name="course_id" ref="course_networks"/>
+        <field name="status">confirmed</field>
+        <field name="grade">a</field>
+    </record>
+
+    <!-- Mohammed -->
+    <record id="enroll_mohammed_data" model="enrollment.enrollment">
+        <field name="student_id" ref="student_mohammed"/>
+        <field name="course_id" ref="course_data"/>
+        <field name="status">confirmed</field>
+        <field name="grade">b</field>
+    </record>
+    <record id="enroll_mohammed_python" model="enrollment.enrollment">
+        <field name="student_id" ref="student_mohammed"/>
+        <field name="course_id" ref="course_python"/>
+        <field name="status">completed</field>
+        <field name="grade">a</field>
+    </record>
+
+    <!-- Lina -->
+    <record id="enroll_lina_ai" model="enrollment.enrollment">
+        <field name="student_id" ref="student_lina"/>
+        <field name="course_id" ref="course_ai"/>
+        <field name="status">draft</field>
+        <field name="grade">na</field>
+    </record>
+
+    <!-- Omar -->
+    <record id="enroll_omar_ml" model="enrollment.enrollment">
+        <field name="student_id" ref="student_omar"/>
+        <field name="course_id" ref="course_ml"/>
+        <field name="status">completed</field>
+        <field name="grade">b</field>
+    </record>
+    <record id="enroll_omar_networks" model="enrollment.enrollment">
+        <field name="student_id" ref="student_omar"/>
+        <field name="course_id" ref="course_networks"/>
+        <field name="status">dropped</field>
+        <field name="grade">f</field>
+    </record>
+
+    <!-- Nour -->
+    <record id="enroll_nour_math" model="enrollment.enrollment">
+        <field name="student_id" ref="student_nour"/>
+        <field name="course_id" ref="course_math"/>
+        <field name="status">confirmed</field>
+        <field name="grade">a</field>
+    </record>
+    <record id="enroll_nour_data" model="enrollment.enrollment">
+        <field name="student_id" ref="student_nour"/>
+        <field name="course_id" ref="course_data"/>
+        <field name="status">draft</field>
+        <field name="grade">na</field>
+    </record>
+
+    <!-- Ziad -->
+    <record id="enroll_ziad_python" model="enrollment.enrollment">
+        <field name="student_id" ref="student_ziad"/>
+        <field name="course_id" ref="course_python"/>
+        <field name="status">confirmed</field>
+        <field name="grade">c</field>
+    </record>
+    <record id="enroll_ziad_networks" model="enrollment.enrollment">
+        <field name="student_id" ref="student_ziad"/>
+        <field name="course_id" ref="course_networks"/>
+        <field name="status">draft</field>
+        <field name="grade">na</field>
+    </record>
+
+    <!-- Mariam -->
+    <record id="enroll_mariam_ai" model="enrollment.enrollment">
+        <field name="student_id" ref="student_mariam"/>
+        <field name="course_id" ref="course_ai"/>
+        <field name="status">confirmed</field>
+        <field name="grade">a</field>
+    </record>
+    <record id="enroll_mariam_ml" model="enrollment.enrollment">
+        <field name="student_id" ref="student_mariam"/>
+        <field name="course_id" ref="course_ml"/>
+        <field name="status">confirmed</field>
+        <field name="grade">b</field>
+    </record>
+</odoo>
+

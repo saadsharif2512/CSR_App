@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_student_root" name="EduTrack" sequence="10" />
+
+    <menuitem id="menu_student_students" name="Students" parent="menu_student_root" sequence="10" action="action_student_students"/>
+    <menuitem id="menu_student_courses" name="Courses" parent="menu_student_root" sequence="20" action="action_course_courses"/>
+    <menuitem id="menu_student_enrollments" name="Enrollments" parent="menu_student_root" sequence="30" action="action_enrollment_enrollments"/>
+</odoo>
