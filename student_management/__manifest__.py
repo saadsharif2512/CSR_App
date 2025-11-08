@@ -7,7 +7,7 @@
     'author': 'Workshop',
     'license': 'LGPL-3',
     'website': 'https://example.com',
-    'depends': ['base', 'mail'],
+    'depends': ['base', 'mail', 'hr', 'stock'],
     'data': [
         'security/ir.model.access.csv',
         'views/hr_views.xml',
